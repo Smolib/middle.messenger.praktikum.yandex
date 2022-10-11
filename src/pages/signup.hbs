@@ -1,0 +1,33 @@
+---
+title: Регистрация
+inputs:
+  - name: first_name
+    title: Имя
+    type: text
+  - name: second_name
+    title: Фамилия
+    type: text
+  - name: login
+    title: Логин
+    type: text
+  - name: email
+    title: E-mail
+    type: email
+  - name: password
+    title: Пароль
+    type: password
+  - name: phone
+    title: Телефон
+    type: text
+buttons:
+  - type: submit
+    text: Зарегистрироваться
+  - type: button
+    text: Уже есть аккаунт?
+stylesheets:
+  - /partials/form.scss
+---
+{{!< html}}
+<main>
+{{> form}}
+</main>
