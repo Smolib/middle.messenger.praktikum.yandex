@@ -1,0 +1,139 @@
+---
+stylesheets:
+  - /pages/chats.scss
+  - /pages/chat.scss
+  - /pages/message.scss
+---
+
+{{!< html}}
+
+<main class='chats'>
+  <div class='chats__profile-wrapper'>
+    <a class='chats__profile-link' href='profile.hbs'> &#8592; Профиль</a>
+  </div>
+  <div class='chats__chats-wrapper'>
+    <div class='chat'>
+      <p class='chat__title'>
+        Первый чат
+      </p>
+      <img
+        class='chat__avatar'
+        src='../../static/chatAvatar.jpg'
+        alt='Аватарка чата'
+      />
+      <p class='chat__last-message'>Тут последнее важное сообщение, максимально
+        длинное, очень длинное. Длиннющее. Ох какое длинное. Всю землю обернуть
+        можно.</p>
+      <span class='chat__time'>12:00</span>
+      <span class='chat__number-new-messages'>3</span>
+    </div>
+    <div class='chat'>
+      <p class='chat__title'>
+        Второй чат
+      </p>
+      <img
+        class='chat__avatar'
+        src='../../static/chatAvatar.jpg'
+        alt='Аватарка чата'
+      />
+      <p class='chat__last-message'>Длиннющее. Ох какое длинное. Всю землю
+        обернуть можно. Тут последнее важное сообщение, максимально длинное,
+        очень длинное.</p>
+      <span class='chat__time'>4:35</span>
+      <span class='chat__number-new-messages'></span>
+    </div>
+    <div class='chat'>
+      <p class='chat__title'>
+        Третий чат
+      </p>
+      <img
+        class='chat__avatar'
+        src='../../static/chatAvatar.jpg'
+        alt='Аватарка чата'
+      />
+      <p class='chat__last-message'>А тут короткое.</p>
+      <span class='chat__time'>7:35</span>
+      <span class='chat__number-new-messages'>198</span>
+    </div>
+    <div class='chat'>
+      <p class='chat__title'>
+        Четвертый чат с очень длинным названием.
+      </p>
+      <img
+        class='chat__avatar'
+        src='../../static/chatAvatar.jpg'
+        alt='Аватарка чата'
+      />
+      <p class='chat__last-message'>А тут короткое.</p>
+      <span class='chat__time'>7:35</span>
+      <span class='chat__number-new-messages'></span>
+    </div>
+    <div class='chats__add-chat-button-wrapper'>
+      <span>
+        Добавить новый чат
+      </span>
+    </div>
+  </div>
+  <div class='chats__messages-wrapper'>
+    <div class='message'>
+      <div class="message__profile-wrapper">
+        <img class="message__avatar" src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_woman_people_girl_glasses_icon_159125.png" alt="Аватар">
+        <p class="message__name">Имя злостного оппонента</p>
+      </div>
+      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
+        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+        Большой текст. Большущий. Большенный.</p>
+    </div>
+    <div class='message message_my'>
+      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
+        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+        Большой текст. Большущий. Большенный.</p>
+    </div>
+    <div class='message'>
+      <div class="message__profile-wrapper">
+        <img class="message__avatar" src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_woman_people_girl_glasses_icon_159125.png" alt="Аватар">
+        <p class="message__name">Имя злостного оппонента</p>
+      </div>
+      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
+        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+        Большой текст. Большущий. Большенный.</p>
+    </div>
+    <div class='message'>
+      <div class="message__profile-wrapper">
+        <img class="message__avatar" src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_woman_people_girl_glasses_icon_159125.png" alt="Аватар">
+        <p class="message__name">Имя злостного оппонента</p>
+      </div>
+      <p class='message__text'>А</p>
+    </div>
+    <div class='message'>
+      <div class="message__profile-wrapper">
+        <img class="message__avatar" src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_woman_people_girl_glasses_icon_159125.png" alt="Аватар">
+        <p class="message__name">Имя злостного оппонента</p>
+      </div>
+      <p class='message__text'>это</p>
+    </div>
+    <div class='message'>
+      <div class="message__profile-wrapper">
+        <img class="message__avatar" src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_woman_people_girl_glasses_icon_159125.png" alt="Аватар">
+        <p class="message__name">Имя злостного оппонента</p>
+      </div>
+      <p class='message__text'>маленький</p>
+    </div>
+  </div>
+  <form class='chats__search-wrapper'>
+    <input
+      class='chats__search-input'
+      type='text'
+      placeholder='Поиск в сообщениях'
+    />
+    <button class='chats__search-submit' type='submit'>Искать</button>
+  </form>
+  <form class='chats__new-message-wrapper' name='new-message'>
+    <input
+      class='chats__new-message-input'
+      type='text'
+      placeholder='Введите новое сообщение'
+    />
+    <button class='chats__new-message-submit' type='submit'>Отправить</button>
+  </form>
+</main>

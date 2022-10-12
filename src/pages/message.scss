@@ -1,0 +1,34 @@
+.message {
+
+  max-width: 500px;
+  background-color: white;
+  border: 1px dotted black;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &__profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 15px;
+    color: gray
+  }
+
+  &_my {
+    background-color: gainsboro;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+  }
+}
