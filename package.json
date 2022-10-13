@@ -2,7 +2,7 @@
   "name": "messenger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "parcel --no-cache ./src/index.html",
     "build": "npx -p parcel-bundler parcel build ./src/index.html" ,
