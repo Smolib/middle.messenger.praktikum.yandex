@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel --no-cache ./src/index.hbs",
-    "build": "parcel build ./src/index.hbs",
+    "dev": "parcel --no-cache src/index.hbs",
+    "build": "parcel build src/index.hbs",
     "start": "npm run build && node ./src/server.js"
   },
   "keywords": [],
