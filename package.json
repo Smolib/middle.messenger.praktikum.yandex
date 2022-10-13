@@ -2,10 +2,6 @@
   "name": "messenger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.hbs",
-  "targets": {
-    "main": false
-  },
   "scripts": {
     "dev": "parcel --no-cache ./src/index.hbs",
     "build": "parcel build ./src/index.hbs",
