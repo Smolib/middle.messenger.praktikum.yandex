@@ -1,8 +1,32 @@
 ---
+messages:
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - text: Мой ответ
+    isMyMessage: true
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - text: Мой лаконичный маленький ответ
+    isMyMessage: true
+chats:
+  - title: Первый чат
+    avatar: ../../static/chatAvatar.jpg
+    last-message: Тут последнее важное сообщение, максимально длинное, очень длинное. Длиннющее. Ох какое длинное. Всю землю обернуть можно.
+    time: 12:00
+    number-new-message: 21
+  - title: Второй чат
+    avatar: ../../static/chatAvatar.jpg
+    last-message: А тут короткое сообщение
+    time: 3:00
 stylesheets:
   - /pages/chats.scss
-  - /pages/chat.scss
-  - /pages/message.scss
+  - /partials/chat.scss
+  - /partials/message.scss
 ---
 
 {{!< html}}
@@ -12,62 +36,9 @@ stylesheets:
     <a class='chats__profile-link' href='profile.hbs'> &#8592; Профиль</a>
   </div>
   <div class='chats__chats-wrapper'>
-    <div class='chat'>
-      <p class='chat__title'>
-        Первый чат
-      </p>
-      <img
-        class='chat__avatar'
-        src='../../static/chatAvatar.jpg'
-        alt='Аватарка чата'
-      />
-      <p class='chat__last-message'>Тут последнее важное сообщение, максимально
-        длинное, очень длинное. Длиннющее. Ох какое длинное. Всю землю обернуть
-        можно.</p>
-      <span class='chat__time'>12:00</span>
-      <span class='chat__number-new-messages'>3</span>
-    </div>
-    <div class='chat'>
-      <p class='chat__title'>
-        Второй чат
-      </p>
-      <img
-        class='chat__avatar'
-        src='../../static/chatAvatar.jpg'
-        alt='Аватарка чата'
-      />
-      <p class='chat__last-message'>Длиннющее. Ох какое длинное. Всю землю
-        обернуть можно. Тут последнее важное сообщение, максимально длинное,
-        очень длинное.</p>
-      <span class='chat__time'>4:35</span>
-      <span class='chat__number-new-messages'></span>
-    </div>
-    <div class='chat'>
-      <p class='chat__title'>
-        Третий чат
-      </p>
-      <img
-        class='chat__avatar'
-        src='../../static/chatAvatar.jpg'
-        alt='Аватарка чата'
-      />
-      <p class='chat__last-message'>А тут короткое.</p>
-      <span class='chat__time'>7:35</span>
-      <span class='chat__number-new-messages'>198</span>
-    </div>
-    <div class='chat'>
-      <p class='chat__title'>
-        Четвертый чат с очень длинным названием.
-      </p>
-      <img
-        class='chat__avatar'
-        src='../../static/chatAvatar.jpg'
-        alt='Аватарка чата'
-      />
-      <p class='chat__last-message'>А тут короткое.</p>
-      <span class='chat__time'>7:35</span>
-      <span class='chat__number-new-messages'></span>
-    </div>
+    {{#each chats}}
+      {{> chat}}
+    {{/each}}
     <div class='chats__add-chat-button-wrapper'>
       <span>
         Добавить новый чат
@@ -75,50 +46,9 @@ stylesheets:
     </div>
   </div>
   <div class='chats__messages-wrapper'>
-    <div class='message'>
-      <div class="message__profile-wrapper">
-        <img class="message__avatar" src="../../static/messageAvatar.jpg" alt="Аватар">
-        <p class="message__name">Имя злостного оппонента</p>
-      </div>
-      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
-        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
-        Большой текст. Большущий. Большенный.</p>
-    </div>
-    <div class='message message_my'>
-      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
-        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
-        Большой текст. Большущий. Большенный.</p>
-    </div>
-    <div class='message'>
-      <div class="message__profile-wrapper">
-        <img class="message__avatar" src="../../static/messageAvatar.jpg" alt="Аватар">
-        <p class="message__name">Имя злостного оппонента</p>
-      </div>
-      <p class='message__text'>Большой текст. Большущий. Большенный. Большой
-        текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
-        Большой текст. Большущий. Большенный.</p>
-    </div>
-    <div class='message'>
-      <div class="message__profile-wrapper">
-        <img class="message__avatar" src="../../static/messageAvatar.jpg" alt="Аватар">
-        <p class="message__name">Имя злостного оппонента</p>
-      </div>
-      <p class='message__text'>А</p>
-    </div>
-    <div class='message'>
-      <div class="message__profile-wrapper">
-        <img class="message__avatar" src="../../static/messageAvatar.jpg" alt="Аватар">
-        <p class="message__name">Имя злостного оппонента</p>
-      </div>
-      <p class='message__text'>это</p>
-    </div>
-    <div class='message'>
-      <div class="message__profile-wrapper">
-        <img class="message__avatar" src="../../static/messageAvatar.jpg" alt="Аватар">
-        <p class="message__name">Имя злостного оппонента</p>
-      </div>
-      <p class='message__text'>маленький</p>
-    </div>
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
   </div>
   <form class='chats__search-wrapper'>
     <input
