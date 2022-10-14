@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow: scroll;
+    overflow: auto;
     padding: 20px 0;
     box-sizing: border-box;
   }
@@ -39,7 +39,7 @@
   &__messages-wrapper {
     grid-area: messages;
     position: relative;
-    overflow: scroll;
+    overflow: auto;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
