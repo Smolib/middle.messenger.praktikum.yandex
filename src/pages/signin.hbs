@@ -1,0 +1,22 @@
+---
+title: Авторизация
+inputs:
+  - name: login
+    title: Логин
+    type: text
+  - name: password
+    title: Пароль
+    type: password
+buttons:
+  - type: submit
+    text: Войти
+  - type: button
+    text: Ещё не зарегистрированы?
+    link: /pages/signup.hbs
+stylesheets:
+  - /partials/form.scss
+---
+{{!< html}}
+<main>
+{{> form}}
+</main>

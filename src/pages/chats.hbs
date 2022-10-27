@@ -1,0 +1,69 @@
+---
+messages:
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - text: Мой ответ
+    isMyMessage: true
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - avatar: ../../static/messageAvatar.jpg
+    name: Имя злостного оппонента
+    text: Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный. Большой текст. Большущий. Большенный.
+  - text: Мой лаконичный маленький ответ
+    isMyMessage: true
+chats:
+  - title: Первый чат
+    avatar: ../../static/chatAvatar.jpg
+    last-message: Тут последнее важное сообщение, максимально длинное, очень длинное. Длиннющее. Ох какое длинное. Всю землю обернуть можно.
+    time: '12:00'
+    number-new-message: 21
+  - title: Второй чат
+    avatar: ../../static/chatAvatar.jpg
+    last-message: А тут короткое сообщение
+    time: '3:00'
+stylesheets:
+  - /pages/chats.scss
+  - /partials/chat.scss
+  - /partials/message.scss
+---
+
+{{!< html}}
+
+<main class='chats'>
+  <div class='chats__profile-wrapper'>
+    <a class='chats__profile-link' href='profile.hbs'> &#8592; Профиль</a>
+  </div>
+  <div class='chats__chats-wrapper'>
+    {{#each chats}}
+      {{> chat}}
+    {{/each}}
+    <div class='chats__add-chat-button-wrapper'>
+      <span>
+        Добавить новый чат
+      </span>
+    </div>
+  </div>
+  <div class='chats__messages-wrapper'>
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
+  <form class='chats__search-wrapper'>
+    <input
+      class='chats__search-input'
+      type='text'
+      placeholder='Поиск в сообщениях'
+    />
+    <button class='chats__search-submit' type='submit'>Искать</button>
+  </form>
+  <form class='chats__new-message-wrapper' name='new-message'>
+    <input
+      class='chats__new-message-input'
+      type='text'
+      placeholder='Введите новое сообщение'
+    />
+    <button class='chats__new-message-submit' type='submit'>Отправить</button>
+  </form>
+</main>
